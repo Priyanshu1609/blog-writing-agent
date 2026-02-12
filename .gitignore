@@ -4,3 +4,4 @@ outputs/
 images/
 *.pyc
 .env
+blog_agent.egg-info/

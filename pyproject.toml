@@ -1,0 +1,32 @@
+[project]
+name = "blog-agent"
+version = "0.1.0"
+description = "Blog generation agent"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.110",
+  "langchain-community>=0.2.0",
+  "langchain-openai>=0.1.6",
+  "langchain-core>=0.3.0",
+  "langgraph>=0.2.0",
+  "pydantic>=2.5",
+  "pydantic-settings>=2.2",
+  "python-dotenv>=1.0",
+  "tavily-python>=0.3.0",
+  "google-genai>=0.3.0",
+  "uvicorn>=0.29",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.6.0"]
+
+[tool.ruff]
+line-length = 100
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["api", "llm", "models", "prompts", "steps"]
